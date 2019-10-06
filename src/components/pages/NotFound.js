@@ -1,6 +1,4 @@
-import React, { Fragment } from 'react';
-import Search from '../users/Search';
-import Users from '../users/Users';
+import React from 'react';
  
 const NotFound = () => (
   <div>
