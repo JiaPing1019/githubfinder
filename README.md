@@ -20,7 +20,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 Builds the app for production to the `build` folder.<br>
 
-### Deploy to Netlify
+### `Deploy to Netlify`
 
 Click this link to visit the website.<br>
 https://amazing-volhard-06fce0.netlify.com/
