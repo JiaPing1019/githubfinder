@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import Search from '../users/Search';
-import SearchRepos from '../repos/SearchRepos';
 import Users from '../users/Users';
  
-const Home = () => (
+const UsersPage = () => (
   <Fragment>
-    This is the home page
+    <Search />
+    <Users />
   </Fragment>
 );
 
-export default Home;
+export default UsersPage;

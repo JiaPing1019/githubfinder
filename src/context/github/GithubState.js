@@ -4,6 +4,7 @@ import GithubContext from './githubContext';
 import GithubReducer from './githubReducer';
 import {
   SEARCH_USERS,
+  SEARCH_REPOS,
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
@@ -40,6 +41,18 @@ const GithubState = props => {
 
     dispatch({
       type: SEARCH_USERS,
+      payload: res.data.items
+    });
+  };
+
+  // Search Repos
+  const searchRepos = async text => {
+    setLoading();
+    const res = await axios.get(
+      `https://api.github.com/search/repositories?q=${text}&client_id=${githubClientId}&client_secret=${githubClentSecret}`);
+
+    dispatch({
+      type: SEARCH_REPOS,
       payload: res.data.items
     });
   };
@@ -84,6 +97,7 @@ const GithubState = props => {
         repos: state.repos,
         loading: state.loading,
         searchUsers,
+        searchRepos,
         clearUsers,
         getUser,
         getUserRepos
