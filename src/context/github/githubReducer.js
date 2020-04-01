@@ -4,7 +4,8 @@ import {
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
-  GET_REPOS
+  GET_REPOS,
+  GET_EVENTS
 } from '../types';
 
 export default (state, action) => {
@@ -43,6 +44,12 @@ export default (state, action) => {
       return {
         ...state,
         loading: true
+      };
+    case GET_EVENTS:
+      return {
+        ...state,
+        events: action.payload,
+        loading: false
       };
     default:
       return state;

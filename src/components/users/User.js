@@ -1,20 +1,23 @@
 import React, {Fragment, useEffect, useContext} from 'react';
 import Spinner from '../layout/Spinner';
 import Repos from '../repos/Repos';
+import Events from '../events/Events';
 import {Link} from 'react-router-dom';
 import GithubContext from '../../context/github/githubContext';
 import {makeStyles} from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import List from '@material-ui/core/List';
 
 const User = ({match}) => {
   const githubContext = useContext(GithubContext);
-  const {user, loading, getUser, repos, getUserRepos} = githubContext;
+  const {user, loading, getUser, repos, events, getUserRepos, getUserEvents} = githubContext;
   const classes = useStyles();
 
   useEffect(() => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
+    getUserEvents(match.params.login);
     //eslint-disable-next-line
   }, []);
 
@@ -115,7 +118,7 @@ const User = ({match}) => {
             <Repos repos={repos} />
           </Grid>
           <Grid item xs={6}>
-            <Paper className={classes.paper}>xs</Paper>
+            <Events events={events} />
           </Grid>
         </Grid>
       </div>

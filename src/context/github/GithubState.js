@@ -8,7 +8,8 @@ import {
   SET_LOADING,
   CLEAR_USERS,
   GET_USER,
-  GET_REPOS
+  GET_REPOS,
+  GET_EVENTS
 } from '../types';
 
 let githubClientId;
@@ -27,6 +28,7 @@ const GithubState = props => {
     users: [],
     user: {},
     repos: [],
+    events: [],
     loading: false
 	};
 
@@ -89,18 +91,32 @@ const GithubState = props => {
   // Dispatch our reducers
   const setLoading = () => dispatch({ type: SET_LOADING });
 
+  // Get Events 
+  const getUserEvents = async (username) => {
+    setLoading();
+
+    const res = await axios.get(`https://api.github.com/users/${username}/events?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`);
+    dispatch({
+      type: GET_EVENTS,
+      payload: res.data
+    });
+  };
+
+
   return (
     <GithubContext.Provider
       value={{
         users: state.users,
         user: state.user,
         repos: state.repos,
+        events: state.events,
         loading: state.loading,
         searchUsers,
         searchRepos,
         clearUsers,
         getUser,
-        getUserRepos
+        getUserRepos,
+        getUserEvents
       }}
     >
       {props.children}
