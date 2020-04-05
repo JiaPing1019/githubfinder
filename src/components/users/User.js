@@ -118,7 +118,10 @@ const User = ({match}) => {
             <Repos repos={repos} />
           </Grid>
           <Grid item xs={6}>
-            <Events events={events} />
+					  <h3>Event</h3>
+            <div>
+              <Events events={events} />
+            </div>
           </Grid>
         </Grid>
       </div>
