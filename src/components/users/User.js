@@ -5,9 +5,7 @@ import Events from '../events/Events';
 import {Link} from 'react-router-dom';
 import GithubContext from '../../context/github/githubContext';
 import {makeStyles} from '@material-ui/core/styles';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import List from '@material-ui/core/List';
 
 const User = ({match}) => {
   const githubContext = useContext(GithubContext);

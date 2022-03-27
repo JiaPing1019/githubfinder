@@ -1,7 +1,4 @@
 import React, { Fragment } from 'react';
-import Search from '../users/Search';
-import SearchRepos from '../repos/SearchRepos';
-import Users from '../users/Users';
  
 const Home = () => (
   <Fragment>
