@@ -1,26 +1,29 @@
 # Github Finder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is to help user to find the github account and github repository via searching keyword.<br>
+The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Quick start
 
-In the project directory, you can run:
+### Install dependencies
+```
+npm install
+```
 
-### `npm start`
+### Run in the development mode
+```
+npm start
+```
 
-Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Demo
 
-### `npm run build`
+https://user-images.githubusercontent.com/12680148/160301505-ece25413-7545-475d-b36d-e0963992546d.mov
 
-Builds the app for production to the `build` folder.<br>
 
-### `Deploy to Netlify`
+### Deploy to Vercel
 
 Click this link to visit the website.<br>
-https://amazing-volhard-06fce0.netlify.com/
+https://githubfinder-tan.vercel.app/
