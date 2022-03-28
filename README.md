@@ -1,6 +1,6 @@
 # Github Finder
 
-This project is to help user to find the github account and github repository via searching keyword.<br>
+This project is to help user find the github account and github repository via searching keyword.<br>
 The project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Quick start
